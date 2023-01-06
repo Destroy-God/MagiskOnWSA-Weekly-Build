@@ -717,7 +717,7 @@ jobs:
           path: "./${{ matrix.arch }}/*" 
           
       - name: Compress WSA
-        run: mkdir ./${{ matrix.arch }}/build
+        run: mkdir ./${{ matrix.arch }}/build \
              tar -czf ${{ env.artifact_name }}.tar.gz "./${{ matrix.arch }}/build"
 
       - name: Upload To Release
