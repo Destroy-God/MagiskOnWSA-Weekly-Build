@@ -717,7 +717,7 @@ jobs:
           path: "./${{ matrix.arch }}/*" 
           
       - name: Compress WSA
-        run: tar -czf ${{ env.artifact_name }}.tar.gz "./${{ matrix.arch }}/"
+        run: tar -czf ${{ env.artifact_name }}.tar.gz "/tmp"
 
       - name: Upload To Release
         uses: softprops/action-gh-release@v1
@@ -725,7 +725,7 @@ jobs:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: WSA-${{ env.WSA_VER }}
-          files: "./${{ matrix.arch }}/${{ env.artifact_name }}.tar.gz"
+          files: "/tmp/${{ env.artifact_name }}.tar.gz"
         
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@v2
