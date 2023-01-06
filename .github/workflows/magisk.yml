@@ -718,8 +718,8 @@ jobs:
       - name: Upload to release
         uses: softprops/action-gh-release@v1
         with:
-            files: ${{ env.artifact_name }}/*.zip
-            tag_name: WSA-${RANDOM}
+            files: ${{ env.artifact_name }}.zip
+            tag_name: WSA-${{ env.WSA_VER }}
         
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@v2
