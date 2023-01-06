@@ -724,8 +724,8 @@ jobs:
         env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: WSA-${{ env.WSA_VER }})
-          files: "./${{ matrix.arch }}/${{ env.artifact_name }}.zip"
+          tag_name: WSA-${{ env.WSA_VER }}
+          files: "./${{ matrix.arch }}/${{ env.artifact_name }}.tar.gz"
         
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@v2
