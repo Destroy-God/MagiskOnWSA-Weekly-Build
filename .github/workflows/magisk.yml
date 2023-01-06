@@ -715,6 +715,12 @@ jobs:
         with:
           name: ${{ env.artifact_name }}
           path: "./${{ matrix.arch }}/*"
+      - name: Upload to release
+        uses: softprops/action-gh-release@v1
+        with:
+            tag_name: ${{ steps.tag.outputs.release_tag }}
+            files: ${{ env.artifact_name }}/*
+        
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@v2
         with:
