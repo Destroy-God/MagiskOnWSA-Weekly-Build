@@ -714,14 +714,18 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ env.artifact_name }}
-          path: "./${{ matrix.arch }}/*"       
-      - name: Upload firmware to release
+          path: "./${{ matrix.arch }}/*" 
+          
+      - name: Compress WSA
+        run: zip -r ${{ env.artifact_name }}.zip "./${{ matrix.arch }}/*"
+
+      - name: Upload To Release
         uses: softprops/action-gh-release@v1
         env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: WSA-${{ env.WSA_VER }})
-          files: "./${{ matrix.arch }}/*"
+          files: "./${{ matrix.arch }}/${{ env.artifact_name }}.zip"
         
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@v2
