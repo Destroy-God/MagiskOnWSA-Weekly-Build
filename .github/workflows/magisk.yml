@@ -714,17 +714,14 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ env.artifact_name }}
-          path: "./${{ matrix.arch }}/*"
-      - name: Compress WSA
-        run: |
-          cd build-windows-x86_64
-          zip ${{ env.artifact_name }}.zip /home/runner/work/MagiskOnWSA-1/MagiskOnWSA-1/x64/*
-          
-      - name: Upload To Release
+          path: "./${{ matrix.arch }}/*"       
+      - name: Upload firmware to release
         uses: softprops/action-gh-release@v1
+        env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-            files: ${{ env.artifact_name }}.zip
-            tag_name: WSA-${{ env.WSA_VER }}
+          tag_name: WSA-${{ env.WSA_VER }})_$(date +"%Y.%m.%d-%H%M")
+          files: "./${{ matrix.arch }}/*"
         
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@v2
