@@ -690,7 +690,7 @@ jobs:
           Write-Host "All Done\`r\`nPress any key to exit"
           \$null = \$Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown')
           EOF
-      - name: Generate Release Version Number
+      - name: Generate Release Version
         run: |
           variant="${{ github.event.inputs.gapps_variant }}"
           root="${{ github.event.inputs.root_sol }}"
