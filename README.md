@@ -6,7 +6,7 @@
 
 ## 如何使用？
 
-下载很简单！你只需在右下角的Release点击一下，看到了那个WSA-Magisk-Gapps-Pico-Setup.zip了吗？点下去！下载完成后，只需要解压到一个空间足够的地方，然后运行里面的Install.ps1，就可以了！就是这么方便！
+下载很简单！你只需在右下角的Release点击一下，看到了那个WSA-with-magisk-GApps-pico_xxx.zip了吗？点下去！下载完成后，只需要解压到一个空间足够的地方，然后运行里面的Install.ps1，就可以了！就是这么方便！
 
 ## 发布的配置是什么？
 
