@@ -716,9 +716,11 @@ jobs:
           name: ${{ env.artifact_name }}
           path: "./${{ matrix.arch }}/*" 
           
+      - name: mkdir
+        run: mkdir "./${{ matrix.arch }}/build"
+          
       - name: Compress WSA
-        run: mkdir ./${{ matrix.arch }}/build \
-             tar -czf ${{ env.artifact_name }}.tar.gz "./${{ matrix.arch }}/build"
+        run: tar -czf ${{ env.artifact_name }}.tar.gz "./${{ matrix.arch }}/build"
 
       - name: Upload To Release
         uses: softprops/action-gh-release@v1
