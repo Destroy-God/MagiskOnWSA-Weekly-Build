@@ -717,7 +717,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag_name: WSA-${{ env.WSA_VER }}
+          tag_name: WSA-${{ env.WSA_VER }}-${{ steps.time.outputs.time }}
           files: |
             ${{ env.release_name }}.zip
           draft: false
