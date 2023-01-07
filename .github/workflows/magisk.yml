@@ -710,9 +710,9 @@ jobs:
             name2="-GApps-${variant}"
           fi
           echo "release_name=WSA${name1}${name2}_${{ env.WSA_VER }}_${{ matrix.arch }}_${{ env.WSA_REL }}" >> $GITHUB_ENV
-      - name: Get current date
-        id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+          
+      - name: Add random number to version
+        run: echo ::set-output name=random::$(head -c 16 /dev/urandom | sha256sum | head -c 8)
 
       - name: Compress All Output
         run: zip -r ${{ env.release_name }}.zip "./${{ matrix.arch }}"
@@ -721,7 +721,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag_name: WSA-${{ env.WSA_VER }}-${{ env.WSA_REL }}
+          tag_name: WSA-${{ env.WSA_VER }}.${{ steps.random.outputs.random }}
           files: |
             ${{ env.release_name }}.zip
           draft: false
