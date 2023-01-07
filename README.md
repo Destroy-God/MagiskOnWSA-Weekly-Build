@@ -1,8 +1,4 @@
-# Magisk on WSA Weekly Build(Unfinished)
-
-## 注意
-
-此项目尚未完成，Release界面是损坏的，但我保证这不会持续太久！
+# Magisk on WSA Weekly Build
 
 ## 介绍
 
