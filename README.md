@@ -1,4 +1,8 @@
-# Magisk on WSA (Weekly Build)
+# Magisk on WSA Weekly Build(Unfinished)
+
+## 注意
+
+此项目尚未完成，Release界面是损坏的，但我保证这不会持续太久！
 
 ## 介绍
 
@@ -6,10 +10,15 @@
 
 ## 如何使用？
 
-下载很简单！只需在右下角的Release点击一下，就可以了！就是这么方便！
+下载很简单！我们只需要点击上面的Actions,找到最新的构建,在Artifacts里点击一下即可，等到此项目完成时，你只需在右下角的Release点击一下，就可以了！就是这么方便！
+
+##默认的配置是什么？
+
+默认为64位x86正式版，移除亚马逊应用商店，Pico版Gapps，使用稳定版Magisk。
 
 ## Credits
 
+- [LSPosed](https://github.com/LSPosed/) The Creator Of MagiskOnWSA
 - [StoreLib](https://github.com/StoreDev/StoreLib): API for downloading WSA
 - [Magisk](https://github.com/topjohnwu/Magisk): The most famous root solution on Android
 - [The Open GApps Project](https://opengapps.org): One of the most famous Google Apps packages solution
