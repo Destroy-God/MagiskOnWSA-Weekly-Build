@@ -723,6 +723,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          tags: WSA-${{ env.WSA_VER }}
           files: |
             ${{ env.artifact_name }}.tar.gz
           draft: false
