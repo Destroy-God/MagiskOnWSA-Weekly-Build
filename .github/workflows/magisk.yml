@@ -714,15 +714,15 @@ jobs:
           echo "release_name=WSA${name1}${name2}_${{ env.WSA_VER }}_${{ matrix.arch }}_${{ env.WSA_REL }}" >> $GITHUB_ENV
 
       - name: Compress All Output
-        run: zip -r WSA-Magisk-Gapps-Pico-Setup.zip "./${{ matrix.arch }}"
+        run: zip -r ${{ env.release_name }}.zip "./${{ matrix.arch }}"
 
       - name: Upload To Release
         uses: softprops/action-gh-release@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag_name: ${{ env.release_name }}
+          tag_name: WSA-${{ env.WSA_VER }}-${{ env.WSA_REL }}
           files: |
-            WSA-Magisk-Gapps-Pico-Setup.zip
+            ${{ env.release_name }}.zip
           draft: false
           body: Hello World
           prerelease: false
