@@ -18,6 +18,6 @@
 - [StoreLib](https://github.com/StoreDev/StoreLib): 下载WSA使用的API作者
 - [Magisk](https://github.com/topjohnwu/Magisk): Magisk项目仓库
 - [The Open GApps Project](https://opengapps.org): Gapps来源
-- [WSA-Kernel-SU](https://github.com/LSPosed/WSA-Kernel-SU) 安装Magisk方案的仓库
+- [WSA-Kernel-SU](https://github.com/LSPosed/WSA-Kernel-SU): 安装Magisk方案的仓库
 - [WSAGAScript](https://github.com/ADeltaX/WSAGAScript): 整合Gapps方案的仓库
 - [ChatGPT](https://chat.openai.com/): Bug查找
