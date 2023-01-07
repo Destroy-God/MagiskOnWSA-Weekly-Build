@@ -16,11 +16,12 @@
 
 默认为64位x86正式版，移除亚马逊应用商店，Pico版Gapps，使用稳定版Magisk。
 
-## Credits
+## 致谢
 
-- [LSPosed](https://github.com/LSPosed/) The Creator Of MagiskOnWSA
-- [StoreLib](https://github.com/StoreDev/StoreLib): API for downloading WSA
-- [Magisk](https://github.com/topjohnwu/Magisk): The most famous root solution on Android
-- [The Open GApps Project](https://opengapps.org): One of the most famous Google Apps packages solution
-- [WSA-Kernel-SU](https://github.com/LSPosed/WSA-Kernel-SU) and [kernel-assisted-superuser](https://git.zx2c4.com/kernel-assisted-superuser/): The kernel `su` for debugging Magisk Integration
-- [WSAGAScript](https://github.com/ADeltaX/WSAGAScript): The first GApps integration script for WSA
+- [LSPosed](https://github.com/LSPosed/) MagiskOnWSA作者
+- [StoreLib](https://github.com/StoreDev/StoreLib): 下载WSA使用的API作者
+- [Magisk](https://github.com/topjohnwu/Magisk): Magisk项目仓库
+- [The Open GApps Project](https://opengapps.org): Gapps来源
+- [WSA-Kernel-SU](https://github.com/LSPosed/WSA-Kernel-SU) 安装Magisk方案的仓库
+- [WSAGAScript](https://github.com/ADeltaX/WSAGAScript): 整合Gapps方案的仓库
+- [ChatGPT](https://chat.openai.com/) Bug查找
