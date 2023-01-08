@@ -8,6 +8,10 @@
 
 下载很简单！你只需在右下角的Release点击一下，看到了那个WSA-with-magisk-GApps-pico_xxx.zip了吗？点下去！下载完成后，只需要解压到一个空间足够的地方，然后运行里面的Install.ps1，就可以了！就是这么方便！
 
+## 显示“在此系统上禁止运行脚本”
+
+在管理员权限的PowerShell里输入set-executionpolicy remotesigned并回车。
+
 ## 发布的配置是什么？
 
 默认为64位x86正式版，移除亚马逊应用商店，Pico版Gapps，使用稳定版Magisk。
