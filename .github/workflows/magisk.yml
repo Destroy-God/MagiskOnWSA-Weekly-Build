@@ -1,7 +1,7 @@
 name: Build WSA
 on:
   schedule:
-    - cron: "0 8 * * 1"
+    - cron: "0 0 * * 1"
   workflow_dispatch:
     inputs:
       arch:
@@ -11,8 +11,6 @@ on:
         type: choice
         options:
         - x64
-        - arm64
-        - x64 & arm64
       release_type:
         description: "WSA release type"
         required: true
@@ -20,9 +18,6 @@ on:
         type: choice
         options:
         - retail
-        - release preview
-        - insider slow
-        - insider fast
       magisk_apk:
         description: "Magisk version"
         required: true
@@ -30,32 +25,19 @@ on:
         type: choice
         options:
         - stable
-        - beta
-        - canary
-        - debug
       gapps_variant:
         description: "Variants of gapps"
         required: true
         default: "pico"
         type: choice
         options:
-        - none
-        - super
-        - stock
-        - full
-        - mini
-        - micro
-        - nano
         - pico
-        - tvstock
-        - tvmini
       remove_amazon:
         description: "Remove Amazon AppStore"
         required: true
         default: "remove"
         type: choice
         options:
-        - keep
         - remove
       root_sol:
         description: "Root solution"
